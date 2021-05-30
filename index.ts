@@ -61,3 +61,13 @@ console.log(`Running selection sort: array ${arr}`);
 Sort.selectionSort(arr)
 
 console.log(`The result of selection sort is: ${arr}`);
+
+console.log('\n');
+
+arr = [100, 2, 64, 34, -1, 25, 12, -44, 22, 11, 90, -40];
+
+console.log(`Running insertion sort: array ${arr}`);
+
+Sort.insertionSort(arr)
+
+console.log(`The result of insertion sort is: ${arr}`);

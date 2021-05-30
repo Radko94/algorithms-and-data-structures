@@ -36,3 +36,20 @@ exports.selectionSort = (array: number[]) => {
         }
     }
 }
+
+exports.insertionSort = (array: Array<number>) => {
+    let y: number;
+    let key: number;
+
+    for (let x = 1; x < array.length; x++) {
+        key = array[x];
+        y = x - 1;
+
+        while (y >= 0 && array[y] > key) {
+            array[y + 1] = array[y];
+            y--;
+        }
+
+        array[y + 1] = key;
+    }
+}
