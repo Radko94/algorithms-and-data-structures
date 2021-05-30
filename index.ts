@@ -11,6 +11,7 @@ const nFactorial: number = Recursion.nFactorial(recursionNumber);
 console.log(`The result of recursion is: n factorial is ${nFactorial}`);
 
 console.log('\n');
+
 const recursivelyRevertString: string = 'Lobalsky';
 
 console.log(`Running recursion: revert string ${recursivelyRevertString}`);
@@ -18,6 +19,8 @@ console.log(`Running recursion: revert string ${recursivelyRevertString}`);
 const revertedString = Recursion.recursivelyRevertString(recursivelyRevertString);
 
 console.log(`The result of recursion is: revert string ${revertedString}`);
+
+console.log('\n');
 
 let arr = [2, 3, 4, 10, 40];
 let x = 10;
@@ -28,14 +31,18 @@ const searchResult = Search.binarySearch(arr, 0, arr.length - 1, x);
 
 console.log(`The result of binary search is: ${searchResult}`);
 
-const text = 'AAAAAAAAAAAAAAAAAB';
-const searchPattern = 'AAAAB';
+console.log('\n');
+
+const text = 'ABAAABCDBBABCDDEBCABC';
+const searchPattern = 'ABC';
 
 console.log(`Running naive string search: text ${text}, search pattern ${searchPattern}`);
 
 const stringSearchResult = Search.naiveStringPatternSearch(text, searchPattern);
 
 console.log(`The result of naive string search is: ${stringSearchResult.length ? stringSearchResult : 'Pattern not found' }`);
+
+console.log('\n');
 
 arr = [100, 64, 34, -1, 25, 12, -44, 22, 11, 90];
 
@@ -44,3 +51,13 @@ console.log(`Running bubble sort: array ${arr}`);
 const bubbleSort = Sort.bubbleSort(arr, arr.length);
 
 console.log(`The result of bubble sort is: ${arr}`);
+
+console.log('\n');
+
+arr = [100, 2, 64, 34, -1, 25, 12, -44, 22, 11, 90, -40];
+
+console.log(`Running selection sort: array ${arr}`);
+
+Sort.selectionSort(arr)
+
+console.log(`The result of selection sort is: ${arr}`);

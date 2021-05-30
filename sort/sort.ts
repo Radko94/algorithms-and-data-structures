@@ -21,3 +21,18 @@ exports.bubbleSort = (array: number[], arrayLength: number) => {
             break;
     }
 }
+
+exports.selectionSort = (array: number[]) => {
+    for (let x = 0; x < array.length - 1; x++) {
+        let lowestIndex: number = x;
+
+        for (let y = x + 1; y < array.length; y++) {
+            if (array[y] < array[lowestIndex]) 
+                lowestIndex = y;
+            
+            const temporaryValue = array[lowestIndex];
+            array[lowestIndex] = array[x];
+            array[x] = temporaryValue;
+        }
+    }
+}
