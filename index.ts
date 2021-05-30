@@ -1,5 +1,6 @@
 const Recursion = require('./recursion/recursion');
 const Search = require('./search/search');
+const Sort = require('./sort/sort');
 
 const recursionNumber: number = 3;
 
@@ -35,3 +36,11 @@ console.log(`Running naive string search: text ${text}, search pattern ${searchP
 const stringSearchResult = Search.naiveStringPatternSearch(text, searchPattern);
 
 console.log(`The result of naive string search is: ${stringSearchResult.length ? stringSearchResult : 'Pattern not found' }`);
+
+arr = [100, 64, 34, -1, 25, 12, -44, 22, 11, 90];
+
+console.log(`Running bubble sort: array ${arr}`);
+
+const bubbleSort = Sort.bubbleSort(arr, arr.length);
+
+console.log(`The result of bubble sort is: ${arr}`);
